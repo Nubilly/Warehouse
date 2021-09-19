@@ -8,5 +8,6 @@ namespace Warehouse.Core.Requests.Bin
 {
     public class AddBinRequest : BaseRequest<AddBinResponse>
     {
+        public Common.Models.Bin Bin { get; set; } = new Common.Models.Bin();
     }
 }

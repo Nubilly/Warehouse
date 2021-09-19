@@ -12,7 +12,7 @@ using Warehouse.Database;
 namespace Warehouse.Database.Migrations
 {
     [DbContext(typeof(WarehouseContext))]
-    [Migration("20210919114317_InitialCreate")]
+    [Migration("20210919154320_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -13,9 +13,9 @@ namespace Warehouse.Database.Migrations
                 name: "Bins",
                 columns: table => new
                 {
+                    Barcode = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Barcode = table.Column<string>(type: "nvarchar(450)", nullable: false),                   
                     Label = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Location = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -28,9 +28,9 @@ namespace Warehouse.Database.Migrations
                 name: "Items",
                 columns: table => new
                 {
+                    Barcode = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Barcode = table.Column<string>(type: "nvarchar(450)", nullable: false),                   
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Location = table.Column<string>(type: "nvarchar(450)", nullable: true),

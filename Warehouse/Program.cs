@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Warehouse.Data;
 using Warehouse.Core.Extensions;
+using Warehouse.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 

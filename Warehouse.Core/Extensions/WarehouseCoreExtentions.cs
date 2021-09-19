@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 using Warehouse.Core.Pipelines;
 using Warehouse.Data;
 using Warehouse.Database;
-using Warehouse.Identity;
 
 namespace Warehouse.Core.Extensions
 {
@@ -37,9 +36,11 @@ namespace Warehouse.Core.Extensions
 
         public static IApplicationBuilder UseWearhouseServices(this IApplicationBuilder app)
         {
-            //var context = app.ApplicationServices.GetService<WarehouseContext>();
+            var scope = app.ApplicationServices.CreateScope();
 
-            //context.Database.Migrate();
+            var context = scope.ServiceProvider.GetRequiredService<WarehouseContext>();
+
+            context.Database.Migrate();
 
             return app;
         }

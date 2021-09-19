@@ -8,5 +8,6 @@ namespace Warehouse.Core.Requests.Bin
 {
     public class RemoveBinRequest : BaseRequest<RemoveBinResponse>
     {
+        public string Barcode { get; set; } = "";
     }
 }
