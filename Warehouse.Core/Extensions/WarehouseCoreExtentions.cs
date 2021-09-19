@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Warehouse.Core.Pipelines;
 using Warehouse.Data;
+using Warehouse.Data.Stores;
 using Warehouse.Database;
 
 namespace Warehouse.Core.Extensions
@@ -30,6 +31,9 @@ namespace Warehouse.Core.Extensions
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<WarehouseContext>();
+
+            services.AddScoped<IBinStore, BinStore>();
+            services.AddScoped<IItemStore, ItemStore>();
 
             return services;
         }

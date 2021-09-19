@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Warehouse.Common;
 
-namespace Warehouse.Data.Stores.Item
+namespace Warehouse.Data.Stores
 {
     public class ItemStore : IItemStore
     {

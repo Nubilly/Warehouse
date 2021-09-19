@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31710.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse", "Warehouse\Warehouse.csproj", "{8D8687D6-1CC6-411E-A478-E05D7B20524F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{07007CFB-B4F4-47BC-95DA-36BDB7F95847}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Core", "Warehouse.Core\Warehouse.Core.csproj", "{879F895B-2C81-4246-9DBE-89407568EFC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warehouse.Core", "Warehouse.Core\Warehouse.Core.csproj", "{879F895B-2C81-4246-9DBE-89407568EFC9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{70103129-70F6-4A87-B24C-1C97F55CD672}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{989C7B35-C524-4A42-AEAF-6D777AC00082}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Data", "Warehouse.Data\Warehouse.Data.csproj", "{E63B0CF8-DA3C-4691-831A-9B08E966426E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warehouse.Data", "Warehouse.Data\Warehouse.Data.csproj", "{E63B0CF8-DA3C-4691-831A-9B08E966426E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Database", "Warehouse.Database\Warehouse.Database.csproj", "{0CF4FB1D-E0B4-4DE1-BE98-7E220278F164}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warehouse.Database", "Warehouse.Database\Warehouse.Database.csproj", "{0CF4FB1D-E0B4-4DE1-BE98-7E220278F164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse.Common", "Warehouse.Common\Warehouse.Common.csproj", "{8CF73DF3-E609-43CD-986A-A163988AB34F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warehouse.Common", "Warehouse.Common\Warehouse.Common.csproj", "{8CF73DF3-E609-43CD-986A-A163988AB34F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Warehouse.Api", "Warehouse.Api\Warehouse.Api.csproj", "{B1430704-79F9-4BBD-B3A8-78D06FA8A93D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Warehouse", "Warehouse\Warehouse.csproj", "{0CBD4A1B-B65C-4E55-983C-D6334C9DC5AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8D8687D6-1CC6-411E-A478-E05D7B20524F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D8687D6-1CC6-411E-A478-E05D7B20524F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D8687D6-1CC6-411E-A478-E05D7B20524F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D8687D6-1CC6-411E-A478-E05D7B20524F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{879F895B-2C81-4246-9DBE-89407568EFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{879F895B-2C81-4246-9DBE-89407568EFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{879F895B-2C81-4246-9DBE-89407568EFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +43,14 @@ Global
 		{8CF73DF3-E609-43CD-986A-A163988AB34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CF73DF3-E609-43CD-986A-A163988AB34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CF73DF3-E609-43CD-986A-A163988AB34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1430704-79F9-4BBD-B3A8-78D06FA8A93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1430704-79F9-4BBD-B3A8-78D06FA8A93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1430704-79F9-4BBD-B3A8-78D06FA8A93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1430704-79F9-4BBD-B3A8-78D06FA8A93D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CBD4A1B-B65C-4E55-983C-D6334C9DC5AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CBD4A1B-B65C-4E55-983C-D6334C9DC5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CBD4A1B-B65C-4E55-983C-D6334C9DC5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CBD4A1B-B65C-4E55-983C-D6334C9DC5AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
