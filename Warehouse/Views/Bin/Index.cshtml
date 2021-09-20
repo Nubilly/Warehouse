@@ -1,0 +1,68 @@
+﻿@model PagedList<Bin> 
+
+@{
+    ViewData["Title"] = "Bins";
+    var pager = (Pager)ViewData["Pager"];
+
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="form">
+    <p>
+        @Html.ActionLink("Add Bin", "Add", new { }, new { @class = "button" })
+    </p>
+
+    <div class="Search">        
+        @Html.TextBox("Filter", pager.Filter,"", new { placeholder = "Search..."})
+        @Html.ActionLink("Search", "Index", new { filter = pager.Filter, page = pager.Page, pageSize = pager.PageSize }, new { @class = "button" })        
+    </div>
+</div>
+<table id="Users" class="table table-condensed table-hover">
+    <tr>
+        <th>
+            @Html.DisplayName("Id")
+        </th>
+        <th>
+            @Html.DisplayName("Barcode")
+        </th>
+        <th>
+            @Html.DisplayName("Lable")
+        </th>
+        <th>
+            @Html.DisplayName("Location")
+        </th>
+        <th>
+        </th>
+    </tr>
+    @if (Model == null)
+    {
+        <tr>
+            <td colspan="5">
+                No Results
+            </td>
+        </tr>
+    }
+    else
+    {
+        @for (var i = 0; i < (Model?.Items.Count ?? 0); i++)
+        {        
+            <tr>
+                <td>
+                     @Html.DisplayFor(modelItem => modelItem.Items[i].Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Items[i].Barcode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Items[i].Label)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Items[i].Location)
+                </td>
+                <td>                   
+                </td>
+            </tr>
+        }
+    }
+
+</table>
