@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Warehouse.Common;
-using Warehouse.Core.Requests.Bin;
+using Warehouse.Core.Requests.ManageBins;
 
 namespace Warehouse.Controllers
 {

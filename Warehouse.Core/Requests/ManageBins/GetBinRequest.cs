@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Warehouse.Core.Requests.Bin
+namespace Warehouse.Core.Requests.ManageBins
 {
-    public class RemoveBinRequest : BaseRequest<RemoveBinResponse>
+    public class GetBinRequest : BaseRequest<GetBinResponse>
     {
         public string Barcode { get; set; } = "";
     }

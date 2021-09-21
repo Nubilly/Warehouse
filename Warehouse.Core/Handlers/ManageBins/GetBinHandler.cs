@@ -4,26 +4,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Warehouse.Core.Requests.Bin;
+using Warehouse.Core.Requests.ManageBins;
 using Warehouse.Data.Stores;
 
 namespace Warehouse.Core.Handlers
 {
-    public class AddBinHandler : IRequestHandler<AddBinRequest, AddBinResponse>
+    public class GetBinHandler : IRequestHandler<GetBinRequest, GetBinResponse>
     {
         private readonly IBinStore BinStore;
 
-        public AddBinHandler(IBinStore binStore)
+        public GetBinHandler(IBinStore binStore)
         {
             BinStore = binStore;
         }
 
-        public async Task<AddBinResponse> Handle(AddBinRequest request, CancellationToken cancellationToken)
+        public async Task<GetBinResponse> Handle(GetBinRequest request, CancellationToken cancellationToken)
         {
-            await BinStore.AddBin(request.Bin, cancellationToken);
-
-            return new AddBinResponse
-            {                
+            return new GetBinResponse
+            {
+                Bin = await BinStore.GetBin(request.Barcode, cancellationToken),
                 ResponseCode = Requests.ResponseCode.Successful
             };
         }

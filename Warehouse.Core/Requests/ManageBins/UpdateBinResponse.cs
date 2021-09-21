@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Warehouse.Core.Requests.Bin
+namespace Warehouse.Core.Requests.ManageBins
 {
-    public class RemoveBinResponse : BaseResponse
+    public class UpdateBinResponse : BaseResponse
     {
     }
 }

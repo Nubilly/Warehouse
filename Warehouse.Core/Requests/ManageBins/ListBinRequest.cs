@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Warehouse.Common;
 
-namespace Warehouse.Core.Requests.Bin
+namespace Warehouse.Core.Requests.ManageBins
 {
     public class ListBinRequest : BaseRequest<ListBinResponse>
     {
