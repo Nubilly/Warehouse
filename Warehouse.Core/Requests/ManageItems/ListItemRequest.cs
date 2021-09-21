@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Warehouse.Common;
+
+namespace Warehouse.Core.Requests.ManageItems
+{
+	public class ListItemRequest : BaseRequest<ListItemResponse>
+	{
+		public Pager Pager { get; set; } = new Pager();
+	}
+}

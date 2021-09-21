@@ -14,10 +14,16 @@ namespace Warehouse.Controllers
             this.mediator = mediator;
         }
 
-        public async Task<IActionResult> Index([FromQuery] string filter = "", [FromQuery] int page = 1, [FromQuery] int pageSize = 100)
+        public async Task<IActionResult> Index()
         {
-            var pager = new Pager { Filter = filter, Page = page, PageSize = pageSize };
+            var response = await mediator.Send(new ListBinRequest {}, HttpContext.RequestAborted);
 
+            return View(response.Bins);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Index(Pager pager)
+        {
             ViewData["Pager"] = pager;
 
             var response = await mediator.Send(new ListBinRequest { Pager = pager }, HttpContext.RequestAborted);

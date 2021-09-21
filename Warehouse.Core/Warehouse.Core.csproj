@@ -21,9 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\ManageItems\" />
-    <Folder Include="Handlers\ManageProcessors\" />
-    <Folder Include="Requests\ManageItems\" />
+    <Folder Include="Validators\ManageBins\" />
+    <Folder Include="Validators\ManageItems\" />
+    <Folder Include="Validators\ManageProcessors\" />
   </ItemGroup>
 
 </Project>

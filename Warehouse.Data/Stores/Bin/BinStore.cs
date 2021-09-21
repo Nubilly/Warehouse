@@ -45,7 +45,7 @@ namespace Warehouse.Data.Stores
         {
             Expression<Func<Database.Tables.Bin, bool>> condition = x =>
                       x.Barcode.Contains(pager.Filter)
-                   || x.Label.ToString().Contains(pager.Filter);
+                   || x.Label.Contains(pager.Filter);
 
             var query = WarehouseContext.Set<Database.Tables.Bin>().AsNoTracking().WhereIf(!string.IsNullOrEmpty(pager.Filter), condition);
 
