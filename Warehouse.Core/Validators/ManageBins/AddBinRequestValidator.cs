@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Warehouse.Core.Requests.ManageBins;
+using Warehouse.Core.Validators.ManageBins;
+using Warehouse.Data.Stores;
 
 namespace Warehouse.Core.Validators
 {
     public class AddBinRequestValidator : AbstractValidator<AddBinRequest>
     {
-        public AddBinRequestValidator()
+        public AddBinRequestValidator(IBinStore binStore)
         {
-            RuleFor(x => x.Bin.Barcode).NotEmpty();
+            RuleFor(x => x.Bin).SetValidator(new BinValidator(binStore));
         }
     }
 }

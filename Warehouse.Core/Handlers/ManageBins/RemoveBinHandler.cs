@@ -18,9 +18,14 @@ namespace Warehouse.Core.Handlers
             BinStore = binStore;
         }
 
-		public Task<RemoveBinResponse> Handle(RemoveBinRequest request, CancellationToken cancellationToken)
+		public async Task<RemoveBinResponse> Handle(RemoveBinRequest request, CancellationToken cancellationToken)
 		{
-			throw new NotImplementedException();
-		}
+            await BinStore.RemoveBin(request.Barcode, cancellationToken);
+
+            return new RemoveBinResponse
+            {
+                ResponseCode = Requests.ResponseCode.Successful
+            };
+        }
 	}
 }

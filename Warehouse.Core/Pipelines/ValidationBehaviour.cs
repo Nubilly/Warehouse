@@ -9,7 +9,7 @@ using Warehouse.Core.Requests;
 
 namespace Warehouse.Core.Pipelines
 {
-    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : BaseRequest<TResponse> where TResponse : BaseResponse
+    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : BaseRequest<TResponse> where TResponse : BaseResponse, new()
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
         public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators)
@@ -26,11 +26,10 @@ namespace Warehouse.Core.Pipelines
 
                 if (validationResults.Any(x => !x.IsValid))
                 {
-                    var response = Activator.CreateInstance<BaseResponse>();
-
-                    response.ResponseCode = ResponseCode.ValidationFailed;
-
-                    return (TResponse)response;
+                    return new TResponse {
+                        ResponseCode = ResponseCode.ValidationFailed,
+                        Errors = failures
+                    };
                 }                
             }
             return await next();

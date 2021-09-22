@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +24,10 @@ namespace Warehouse.Core.Extensions
             services.AddMediatR(typeof(WarehouseCoreExtentions));
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
-            
+
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(x => !x.IsDynamic).ToList();
+            AssemblyScanner.FindValidatorsInAssemblies(assemblies).ForEach(x => services.AddTransient(x.InterfaceType, x.ValidatorType));
+
             var connectionString = configuration.GetConnectionString("DefaultConnection");
 
             services.AddDbContext<WarehouseContext>(options => options.UseSqlServer(connectionString));

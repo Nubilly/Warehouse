@@ -1,73 +1,74 @@
-﻿@model PagedList<Bin> 
+﻿@model PagedList<Bin>
 
 @{
-    ViewData["Title"] = "Bins";
-    Pager pager = ViewData["Pager"] == null ? new Pager() : (Pager)ViewData["Pager"];
+	ViewData["Title"] = "Bins";
+	Pager pager = ViewData["Pager"] == null ? new Pager() : (Pager)ViewData["Pager"];
 
 }
 <h1>@ViewData["Title"]</h1>
 
 <div class="form">
-    <p>
-        @Html.ActionLink("Add Bin", "Add", new { }, new { @class = "button" })
-    </p>
-     <form asp-action="Index"> 
-          <div class="form-group">
-                <label asp-for="@pager.Filter" class="control-label"></label>
-                <input asp-for="@pager.Filter" class="form-control" placeholder="Search..." />
-                <span asp-validation-for="@pager.Filter" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Search" class="btn btn-primary" />
-            </div>
-     </form>
+	<p>
+		@Html.ActionLink("Add Bin", "Add", new { }, new { @class = "button" })
+	</p>
+	<form asp-action="Index">
+		<div class="form-group">
+			<label asp-for="@pager.Filter" class="control-label"></label>
+			<input asp-for="@pager.Filter" class="form-control" placeholder="Search..." />
+			<span asp-validation-for="@pager.Filter" class="text-danger"></span>
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Search" class="btn btn-primary" />
+		</div>
+	</form>
 </div>
 <table id="Users" class="table table-condensed table-hover">
-    <tr>
-        <th>
-            @Html.DisplayName("Id")
-        </th>
-        <th>
-            @Html.DisplayName("Barcode")
-        </th>
-        <th>
-            @Html.DisplayName("Lable")
-        </th>
-        <th>
-            @Html.DisplayName("Location")
-        </th>
-        <th>
-        </th>
-    </tr>
-    @if (Model == null)
-    {
-        <tr>
-            <td colspan="5">
-                No Results
-            </td>
-        </tr>
-    }
-    else
-    {
-        @for (var i = 0; i < (Model?.Items.Count ?? 0); i++)
-        {        
-            <tr>
-                <td>
-                     @Html.DisplayFor(modelItem => modelItem.Items[i].Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.Items[i].Barcode)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.Items[i].Label)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => modelItem.Items[i].Location)
-                </td>
-                <td>                   
-                </td>
-            </tr>
-        }
-    }
+	<tr>
+		<th>
+			@Html.DisplayName("Id")
+		</th>
+		<th>
+			@Html.DisplayName("Barcode")
+		</th>
+		<th>
+			@Html.DisplayName("Lable")
+		</th>
+		<th>
+			@Html.DisplayName("Location")
+		</th>
+		<th>
+		</th>
+	</tr>
+	@if (Model == null)
+	{
+		<tr>
+			<td colspan="5">
+				No Results
+			</td>
+		</tr>
+	}
+	else
+	{
+		@for (var i = 0; i < (Model?.Items.Count ?? 0); i++)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => modelItem.Items[i].Id)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => modelItem.Items[i].Barcode)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => modelItem.Items[i].Label)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => modelItem.Items[i].Location)
+				</td>
+				<td>
+					@Html.ActionLink("Update","Update","Bin", new { barcode = Model?.Items[i].Barcode }) | @Html.ActionLink("Delete","Remove","Bin", new { barcode = Model?.Items[i].Barcode })
+				</td>
+			</tr>
+		}
+	}
 
 </table>

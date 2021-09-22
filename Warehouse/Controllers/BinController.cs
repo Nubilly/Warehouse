@@ -16,7 +16,7 @@ namespace Warehouse.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var response = await mediator.Send(new ListBinRequest {}, HttpContext.RequestAborted);
+            var response = await mediator.Send(new ListBinRequest { }, HttpContext.RequestAborted);
 
             return View(response.Bins);
         }
@@ -39,7 +39,7 @@ namespace Warehouse.Controllers
             {
                 foreach (var error in response.Errors)
                 {
-                    ModelState.AddModelError(error.Key, error.Value);
+                    ModelState.AddModelError("", error.Value);
                 }
             }
 
@@ -63,7 +63,7 @@ namespace Warehouse.Controllers
             {
                 foreach (var error in response.Errors)
                 {
-                    ModelState.AddModelError(error.Key, error.Value);
+                    ModelState.AddModelError("", error.Value);
                 }
             }
 
@@ -73,17 +73,31 @@ namespace Warehouse.Controllers
             return View(bin);
         }
 
-        public async Task<IActionResult> Update([FromRoute] string barcode, [FromBody] Common.Models.Bin bin)
+        public async Task<IActionResult> Update(string barcode)
         {
-            bin.Barcode = barcode;
+            var response = await mediator.Send(new GetBinRequest { Barcode = barcode }, HttpContext.RequestAborted);
 
+            if (response.ResponseCode == Core.Requests.ResponseCode.ValidationFailed)
+            {
+                foreach (var error in response.Errors)
+                {
+                    ModelState.AddModelError("", error.Value);
+                }
+            }
+
+            return View(response.Bin);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update(Common.Models.Bin bin)
+        {
             var response = await mediator.Send(new UpdateBinRequest { Bin = bin }, HttpContext.RequestAborted);
 
             if (response.ResponseCode == Core.Requests.ResponseCode.ValidationFailed)
             {
                 foreach (var error in response.Errors)
                 {
-                    ModelState.AddModelError(error.Key, error.Value);
+                    ModelState.AddModelError("", error.Value);
                 }
             }
 
@@ -93,7 +107,24 @@ namespace Warehouse.Controllers
             return View(bin);
         }
 
-        public async Task<IActionResult> Remove([FromRoute] string barcode)
+        public async Task<IActionResult> Remove(string barcode)
+        {
+            var response = await mediator.Send(new GetBinRequest { Barcode = barcode }, HttpContext.RequestAborted);
+
+            if (response.ResponseCode == Core.Requests.ResponseCode.ValidationFailed)
+            {
+                foreach (var error in response.Errors)
+                {
+                    ModelState.AddModelError("", error.Value);
+                }
+            }
+
+            return View(response.Bin);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveConfirmed(string barcode)
         {
             var response = await mediator.Send(new RemoveBinRequest { Barcode = barcode }, HttpContext.RequestAborted);
 
@@ -101,14 +132,14 @@ namespace Warehouse.Controllers
             {
                 foreach (var error in response.Errors)
                 {
-                    ModelState.AddModelError(error.Key, error.Value);
+                    ModelState.AddModelError("", error.Value);
                 }
             }
 
             if (ModelState.IsValid)
                 return RedirectToAction("Index");
 
-            return RedirectToAction("Get", new { barcode = barcode });
+            return RedirectToAction("Remove", new { barcode = barcode });
         }
     }
 }

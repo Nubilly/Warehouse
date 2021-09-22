@@ -102,9 +102,10 @@ namespace Warehouse.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-            ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
+            ModelState.Remove(nameof(ReturnUrl));
+            
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout

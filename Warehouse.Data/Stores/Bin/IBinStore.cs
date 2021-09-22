@@ -9,6 +9,8 @@ namespace Warehouse.Data.Stores
 {
     public interface IBinStore
     {
+        Task<bool> BinBarcodeAvaliable(string barcode, CancellationToken cancellationToken = default);
+
         Task<PagedList<Common.Models.Bin>> ListBins(Pager pager, CancellationToken cancellationToken = default);
 
         Task<Common.Models.Bin> GetBin(string barcode, CancellationToken cancellationToken = default);

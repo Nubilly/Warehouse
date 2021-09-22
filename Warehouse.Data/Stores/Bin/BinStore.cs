@@ -25,7 +25,12 @@ namespace Warehouse.Data.Stores
             await WarehouseContext.SaveChangesAsync();
         }
 
-        public async Task<Common.Models.Bin> GetBin(string barcode, CancellationToken cancellationToken = default)
+		public async Task<bool> BinBarcodeAvaliable(string barcode, CancellationToken cancellationToken = default)
+		{
+            return await WarehouseContext.Set<Database.Tables.Bin>().AsNoTracking().AllAsync(x => x.Barcode != barcode, cancellationToken);
+		}
+
+		public async Task<Common.Models.Bin> GetBin(string barcode, CancellationToken cancellationToken = default)
         {
             var bin = await WarehouseContext.Set<Database.Tables.Bin>().AsNoTracking().FirstOrDefaultAsync(x => x.Barcode == barcode, cancellationToken);
 

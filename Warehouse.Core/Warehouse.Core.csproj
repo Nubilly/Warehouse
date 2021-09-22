@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Validators\ManageBins\" />
     <Folder Include="Validators\ManageItems\" />
     <Folder Include="Validators\ManageProcessors\" />
   </ItemGroup>

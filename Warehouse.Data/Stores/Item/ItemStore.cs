@@ -43,7 +43,12 @@ namespace Warehouse.Data.Stores
             };
         }
 
-        public async Task<PagedList<Common.Models.Item>> ListItems(Pager pager, CancellationToken cancellationToken = default)
+		public async Task<bool> ItemBarcodeAvaliable(string barcode, CancellationToken cancellationToken = default)
+		{
+            return await WarehouseContext.Set<Database.Tables.Item>().AsNoTracking().AllAsync(x => x.Barcode != barcode, cancellationToken);
+        }
+
+		public async Task<PagedList<Common.Models.Item>> ListItems(Pager pager, CancellationToken cancellationToken = default)
         {
             Expression<Func<Database.Tables.Item, bool>> condition = x =>
                      x.Barcode.Contains(pager.Filter)
