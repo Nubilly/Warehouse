@@ -1,0 +1,253 @@
+StaticDataCountries
+Model:Country
+Key:long,Description:string,ISO2:string,ISO3:string,Code:int
+1, "Afghanistan","AF","AFG",4
+1, "Albania", "AL", "ALB", 8
+1, "Algeria", "DZ", "DZA", 12
+1, "American Samoa", "AS", "ASM", 16
+1, "Andorra", "AD", "AND", 20
+1, "Angola", "AO", "AGO", 24
+1, "Anguilla", "AI", "AIA", 660
+1, "Antarctica", "AQ", "ATA", 10
+1, "Antigua and Barbuda", "AG", "ATG", 28
+1, "Argentina", "AR", "ARG", 32
+1, "Armenia", "AM", "ARM", 51
+1, "Aruba", "AW", "ABW", 533
+1, "Australia", "AU", "AUS", 36
+1, "Austria", "AT", "AUT", 40
+1, "Azerbaijan", "AZ", "AZE", 31
+1, "Bahamas (the)", "BS", "BHS", 44
+1, "Bahrain", "BH", "BHR", 48
+1, "Bangladesh", "BD", "BGD", 50
+1, "Barbados", "BB", "BRB", 52
+1, "Belarus", "BY", "BLR", 112
+1, "Belgium", "BE", "BEL", 56
+1, "Belize", "BZ", "BLZ", 84
+1, "Benin", "BJ", "BEN", 204
+1, "Bermuda", "BM", "BMU", 60
+1, "Bhutan", "BT", "BTN", 64
+1, "Bolivia (Plurinational State of)", "BO", "BOL", 68
+1, "Bonaire, Sint Eustatius and Saba", "BQ", "BES", 535
+1, "Bosnia and Herzegovina", "BA", "BIH", 70
+1, "Botswana", "BW", "BWA", 72
+1, "Bouvet Island", "BV", "BVT", 74
+1, "Brazil", "BR", "BRA", 76
+1, "British Indian Ocean Territory (the)", "IO", "IOT", 86
+1, "Brunei Darussalam", "BN", "BRN", 96
+1, "Bulgaria", "BG", "BGR", 100
+1, "Burkina Faso", "BF", "BFA", 854
+1, "Burundi", "BI", "BDI", 108
+1, "Cabo Verde", "CV", "CPV", 132
+1, "Cambodia", "KH", "KHM", 116
+1, "Cameroon", "CM", "CMR", 120
+1, "Canada", "CA", "CAN", 124
+1, "Cayman Islands (the)", "KY", "CYM", 136
+1, "Central African Republic (the)", "CF", "CAF", 140
+1, "Chad", "TD", "TCD", 148
+1, "Chile", "CL", "CHL", 152
+1, "China", "CN", "CHN", 156
+1, "Christmas Island", "CX", "CXR", 162
+1, "Cocos (Keeling) Islands (the)", "CC", "CCK", 166
+1, "Colombia", "CO", "COL", 170
+1, "Comoros (the)", "KM", "COM", 174
+1, "Congo (the Democratic Republic of the)", "CD", "COD", 180
+1, "Congo (the)", "CG", "COG", 178
+1, "Cook Islands (the)", "CK", "COK", 184
+1, "Costa Rica", "CR", "CRI", 188
+1, "Croatia", "HR", "HRV", 191
+1, "Cuba", "CU", "CUB", 192
+1, "Curaçao", "CW", "CUW", 531
+1, "Cyprus", "CY", "CYP", 196
+1, "Czechia", "CZ", "CZE", 203
+1, "Côte d'Ivoire", "CI", "CIV", 384
+1, "Denmark", "DK", "DNK", 208
+1, "Djibouti", "DJ", "DJI", 262
+1, "Dominica", "DM", "DMA", 212
+1, "Dominican Republic (the)", "DO", "DOM", 214
+1, "Ecuador", "EC", "ECU", 218
+1, "Egypt", "EG", "EGY", 818
+1, "El Salvador", "SV", "SLV", 222
+1, "Equatorial Guinea", "GQ", "GNQ", 226
+1, "Eritrea", "ER", "ERI", 232
+1, "Estonia", "EE", "EST", 233
+1, "Eswatini", "SZ", "SWZ", 748
+1, "Ethiopia", "ET", "ETH", 231
+1, "Falkland Islands (the) [Malvinas]", "FK", "FLK", 238
+1, "Faroe Islands (the)", "FO", "FRO", 234
+1, "Fiji", "FJ", "FJI", 242
+1, "Finland", "FI", "FIN", 246
+1, "France", "FR", "FRA", 250
+1, "French Guiana", "GF", "GUF", 254
+1, "French Polynesia", "PF", "PYF", 258
+1, "French Southern Territories (the)", "TF", "ATF", 260
+1, "Gabon", "GA", "GAB", 266
+1, "Gambia (the)", "GM", "GMB", 270
+1, "Georgia", "GE", "GEO", 268
+1, "Germany", "DE", "DEU", 276
+1, "Ghana", "GH", "GHA", 288
+1, "Gibraltar", "GI", "GIB", 292
+1, "Greece", "GR", "GRC", 300
+1, "Greenland", "GL", "GRL", 304
+1, "Grenada", "GD", "GRD", 308
+1, "Guadeloupe", "GP", "GLP", 312
+1, "Guam", "GU", "GUM", 316
+1, "Guatemala", "GT", "GTM", 320
+1, "Guernsey", "GG", "GGY", 831
+1, "Guinea", "GN", "GIN", 324
+1, "Guinea-Bissau", "GW", "GNB", 624
+1, "Guyana", "GY", "GUY", 328
+1, "Haiti", "HT", "HTI", 332
+1, "Heard Island and McDonald Islands", "HM", "HMD", 334
+1, "Holy See (the)", "VA", "VAT", 336
+1, "Honduras", "HN", "HND", 340
+1, "Hong Kong", "HK", "HKG", 344
+1, "Hungary", "HU", "HUN", 348
+1, "Iceland", "IS", "ISL", 352
+1, "India", "IN", "IND", 356
+1, "Indonesia", "ID", "IDN", 360
+1, "Iran (Islamic Republic of)", "IR", "IRN", 364
+1, "Iraq", "IQ", "IRQ", 368
+1, "Ireland", "IE", "IRL", 372
+1, "Isle of Man", "IM", "IMN", 833
+1, "Israel", "IL", "ISR", 376
+1, "Italy", "IT", "ITA", 380
+1, "Jamaica", "JM", "JAM", 388
+1, "Japan", "JP", "JPN", 392
+1, "Jersey", "JE", "JEY", 832
+1, "Jordan", "JO", "JOR", 400
+1, "Kazakhstan", "KZ", "KAZ", 398
+1, "Kenya", "KE", "KEN", 404
+1, "Kiribati", "KI", "KIR", 296
+1, "Korea (the Democratic People's Republic of)", "KP", "PRK", 408
+1, "Korea (the Republic of)", "KR", "KOR", 410
+1, "Kuwait", "KW", "KWT", 414
+1, "Kyrgyzstan", "KG", "KGZ", 417
+1, "Lao People's Democratic Republic (the)", "LA", "LAO", 418
+1, "Latvia", "LV", "LVA", 428
+1, "Lebanon", "LB", "LBN", 422
+1, "Lesotho", "LS", "LSO", 426
+1, "Liberia", "LR", "LBR", 430
+1, "Libya", "LY", "LBY", 434
+1, "Liechtenstein", "LI", "LIE", 438
+1, "Lithuania", "LT", "LTU", 440
+1, "Luxembourg", "LU", "LUX", 442
+1, "Macao", "MO", "MAC", 446
+1, "Madagascar", "MG", "MDG", 450
+1, "Malawi", "MW", "MWI", 454
+1, "Malaysia", "MY", "MYS", 458
+1, "Maldives", "MV", "MDV", 462
+1, "Mali", "ML", "MLI", 466
+1, "Malta", "MT", "MLT", 470
+1, "Marshall Islands (the)", "MH", "MHL", 584
+1, "Martinique", "MQ", "MTQ", 474
+1, "Mauritania", "MR", "MRT", 478
+1, "Mauritius", "MU", "MUS", 480
+1, "Mayotte", "YT", "MYT", 175
+1, "Mexico", "MX", "MEX", 484
+1, "Micronesia (Federated States of)", "FM", "FSM", 583
+1, "Moldova (the Republic of)", "MD", "MDA", 498
+1, "Monaco", "MC", "MCO", 492
+1, "Mongolia", "MN", "MNG", 496
+1, "Montenegro", "ME", "MNE", 499
+1, "Montserrat", "MS", "MSR", 500
+1, "Morocco", "MA", "MAR", 504
+1, "Mozambique", "MZ", "MOZ", 508
+1, "Myanmar", "MM", "MMR", 104
+1, "Namibia", "NA", "NAM", 516
+1, "Nauru", "NR", "NRU", 520
+1, "Nepal", "NP", "NPL", 524
+1, "Netherlands (the)", "NL", "NLD", 528
+1, "New Caledonia", "NC", "NCL", 540
+1, "New Zealand", "NZ", "NZL", 554
+1, "Nicaragua", "NI", "NIC", 558
+1, "Niger (the)", "NE", "NER", 562
+1, "Nigeria", "NG", "NGA", 566
+1, "Niue", "NU", "NIU", 570
+1, "Norfolk Island", "NF", "NFK", 574
+1, "North Macedonia", "MK", "MKD", 807
+1, "Northern Mariana Islands (the)", "MP", "MNP", 580
+1, "Norway", "NO", "NOR", 578
+1, "Oman", "OM", "OMN", 512
+1, "Pakistan", "PK", "PAK", 586
+1, "Palau", "PW", "PLW", 585
+1, "Palestine, State of", "PS", "PSE", 275
+1, "Panama", "PA", "PAN", 591
+1, "Papua New Guinea", "PG", "PNG", 598
+1, "Paraguay", "PY", "PRY", 600
+1, "Peru", "PE", "PER", 604
+1, "Philippines (the)", "PH", "PHL", 608
+1, "Pitcairn", "PN", "PCN", 612
+1, "Poland", "PL", "POL", 616
+1, "Portugal", "PT", "PRT", 620
+1, "Puerto Rico", "PR", "PRI", 630
+1, "Qatar", "QA", "QAT", 634
+1, "Romania", "RO", "ROU", 642
+1, "Russian Federation (the)", "RU", "RUS", 643
+1, "Rwanda", "RW", "RWA", 646
+1, "Réunion", "RE", "REU", 638
+1, "Saint Barthélemy", "BL", "BLM", 652
+1, "Saint Helena, Ascension and Tristan da Cunha", "SH", "SHN", 654
+1, "Saint Kitts and Nevis", "KN", "KNA", 659
+1, "Saint Lucia", "LC", "LCA", 662
+1, "Saint Martin (French part)", "MF", "MAF", 663
+1, "Saint Pierre and Miquelon", "PM", "SPM", 666
+1, "Saint Vincent and the Grenadines", "VC", "VCT", 670
+1, "Samoa", "WS", "WSM", 882
+1, "San Marino", "SM", "SMR", 674
+1, "Sao Tome and Principe", "ST", "STP", 678
+1, "Saudi Arabia", "SA", "SAU", 682
+1, "Senegal", "SN", "SEN", 686
+1, "Serbia", "RS", "SRB", 688
+1, "Seychelles", "SC", "SYC", 690
+1, "Sierra Leone", "SL", "SLE", 694
+1, "Singapore", "SG", "SGP", 702
+1, "Sint Maarten (Dutch part)", "SX", "SXM", 534
+1, "Slovakia", "SK", "SVK", 703
+1, "Slovenia", "SI", "SVN", 705
+1, "Solomon Islands", "SB", "SLB", 90
+1, "Somalia", "SO", "SOM", 706
+1, "South Africa", "ZA", "ZAF", 710
+1, "South Georgia and the South Sandwich Islands", "GS", "SGS", 239
+1, "South Sudan", "SS", "SSD", 728
+1, "Spain", "ES", "ESP", 724
+1, "Sri Lanka", "LK", "LKA", 144
+1, "Sudan (the)", "SD", "SDN", 729
+1, "Suriname", "SR", "SUR", 740
+1, "Svalbard and Jan Mayen", "SJ", "SJM", 744
+1, "Sweden", "SE", "SWE", 752
+1, "Switzerland", "CH", "CHE", 756
+1, "Syrian Arab Republic (the)", "SY", "SYR", 760
+1, "Taiwan (Province of China)", "TW", "TWN", 158
+1, "Tajikistan", "TJ", "TJK", 762
+1, "Tanzania, the United Republic of", "TZ", "TZA", 834
+1, "Thailand", "TH", "THA", 764
+1, "Timor-Leste", "TL", "TLS", 626
+1, "Togo", "TG", "TGO", 768
+1, "Tokelau", "TK", "TKL", 772
+1, "Tonga", "TO", "TON", 776
+1, "Trinidad and Tobago", "TT", "TTO", 780
+1, "Tunisia", "TN", "TUN", 788
+1, "Turkey", "TR", "TUR", 792
+1, "Turkmenistan", "TM", "TKM", 795
+1, "Turks and Caicos Islands (the)", "TC", "TCA", 796
+1, "Tuvalu", "TV", "TUV", 798
+1, "Uganda", "UG", "UGA", 800
+1, "Ukraine", "UA", "UKR", 804
+1, "United Arab Emirates (the)", "AE", "ARE", 784
+1, "United Kingdom of Great Britain and Northern Ireland (the)", "GB", "GBR", 826
+1, "United States Minor Outlying Islands (the)", "UM", "UMI", 581
+1, "United States of America (the)", "US", "USA", 840
+1, "Uruguay", "UY", "URY", 858
+1, "Uzbekistan", "UZ", "UZB", 860
+1, "Vanuatu", "VU", "VUT", 548
+1, "Venezuela (Bolivarian Republic of)", "VE", "VEN", 862
+1, "Viet Nam", "VN", "VNM", 704
+1, "Virgin Islands (British)", "VG", "VGB", 92
+1, "Virgin Islands (U.S.)", "VI", "VIR", 850
+1, "Wallis and Futuna", "WF", "WLF", 876
+1, "Western Sahara*", "EH", "ESH", 732
+1, "Yemen", "YE", "YEM", 887
+1, "Zambia", "ZM", "ZMB", 894
+1, "Zimbabwe", "ZW", "ZWE", 716
+1, "Åland Islands", "AX", "ALA", 248)
+
